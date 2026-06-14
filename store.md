@@ -1,0 +1,412 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - img
+      - progressbar
+      - generic: Loading Google Play Console
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - link "Google Play Console logo" [ref=e7] [cursor=pointer]:
+          - /url: /console/u/0/developers/4722227264647952214/app-list
+          - button "Google Play Console logo" [ref=e8]
+        - generic [ref=e9]:
+          - button "Notifications Open notification center" [ref=e45]:
+            - img [ref=e49]: notifications
+            - generic [ref=e51]: Notifications
+          - generic [ref=e10]:
+            - button "Sudoku" [ref=e59] [cursor=pointer]:
+              - generic [ref=e63]:
+                - img [ref=e65]
+                - generic [ref=e69]: Sudoku
+            - button "Switch developer accounts" [ref=e14] [cursor=pointer]:
+              - img "Switch developer accounts" [ref=e16]
+    - generic [ref=e18]:
+      - generic [ref=e816]:
+        - button "Collapse side panel" [ref=e817] [cursor=pointer]:
+          - img [ref=e820]: chevron_right
+        - button "Close side panel" [ref=e822] [cursor=pointer]:
+          - img [ref=e825]: close
+      - generic [ref=e829]:
+        - generic [ref=e899]:
+          - generic [ref=e900]:
+            - generic [ref=e901]:
+              - search "Search assets":
+                - generic [ref=e903]:
+                  - generic:
+                    - img: search
+                  - generic: Search assets
+                  - textbox "Search assets" [ref=e904]
+            - button "Filter (2)" [ref=e911] [cursor=pointer]:
+              - img [ref=e915]: filter_list
+              - generic [ref=e916]:
+                - text: Filter
+                - generic [ref=e917]: (2)
+          - toolbar "Selected filters" [ref=e918]:
+            - row "Ready to use Needs cropping" [ref=e919]:
+              - gridcell "Ready to use":
+                - generic: Ready to use
+                - button "Delete" [ref=e920] [cursor=pointer]:
+                  - img [ref=e923]: close
+              - gridcell "Needs cropping":
+                - generic: Needs cropping
+                - button "Delete" [ref=e924] [cursor=pointer]:
+                  - img [ref=e927]: close
+        - button "Most recent" [ref=e928]:
+          - img [ref=e932]: swap_vert
+          - generic [ref=e933]: Most recent
+        - list "Assets list" [ref=e861]:
+          - listitem "Asset row" [ref=e863]:
+            - generic [ref=e864]:
+              - generic [ref=e866]:
+                - generic [ref=e868]:
+                  - img "icon_512.png" [ref=e869]
+                  - img [ref=e872]: check_circle
+                - generic [ref=e873]: Selected asset icon_512.png
+              - generic [ref=e874]:
+                - generic [ref=e875]: icon_512.png
+                - generic "Asset properties" [ref=e877]:
+                  - list [ref=e878]:
+                    - listitem [ref=e879]: 1∶1
+                    - listitem [ref=e880]: 512x512px
+                    - listitem [ref=e881]: 6/14/2026
+        - generic [ref=e845]:
+          - button "Deselect all" [ref=e882] [cursor=pointer]:
+            - img [ref=e886]: deselect
+          - button "Manage tags" [ref=e887]:
+            - img [ref=e891]: label
+            - generic [ref=e892]: Manage tags
+          - button "Add" [ref=e893]:
+            - img [ref=e897]: add_photo_alternate
+            - generic [ref=e898]: Add
+    - navigation [ref=e72]:
+      - link "All apps" [ref=e73] [cursor=pointer]:
+        - /url: /console/u/0/developers/4722227264647952214/app-list
+        - img [ref=e75]: keyboard_backspace
+        - generic [ref=e76]: All apps
+      - list [ref=e77]:
+        - listitem "Dashboard" [ref=e80]:
+          - button "Dashboard" [ref=e81] [cursor=pointer]:
+            - img [ref=e84]: dashboard
+            - generic [ref=e85]: Dashboard
+        - listitem "Statistics" [ref=e88]:
+          - button "Statistics" [ref=e89] [cursor=pointer]:
+            - img [ref=e92]: bar_chart
+            - generic [ref=e93]: Statistics
+        - listitem "Publishing overview" [ref=e96]:
+          - button "Publishing overview" [ref=e97] [cursor=pointer]:
+            - img [ref=e100]: overview
+            - generic [ref=e101]: Publishing overview
+        - listitem "Protected with Play" [ref=e104]:
+          - button "Protected with Play" [ref=e105] [cursor=pointer]:
+            - img [ref=e108]: shield
+            - generic [ref=e109]: Protected with Play
+        - listitem "Test and release" [ref=e112]:
+          - button "Test and release" [ref=e113] [cursor=pointer]:
+            - img [ref=e116]: rocket_launch
+            - generic [ref=e117]: Test and release
+        - listitem "Monitor and improve" [ref=e120]:
+          - button "Monitor and improve" [ref=e121] [cursor=pointer]:
+            - img [ref=e124]: vital_signs
+            - generic [ref=e125]: Monitor and improve
+        - listitem "Grow users" [ref=e128]:
+          - button "Grow users" [ref=e129] [cursor=pointer]:
+            - img [ref=e132]: finance_mode
+            - generic [ref=e133]: Grow users
+          - list [ref=e134]:
+            - generic [ref=e136]:
+              - listitem "Store presence" [ref=e138]:
+                - button "Store presence" [ref=e139] [cursor=pointer]:
+                  - generic [ref=e140]: Store presence
+                  - img [ref=e142]: expand_less
+                - list [ref=e143]:
+                  - generic [ref=e145]:
+                    - listitem "Store listings" [ref=e147]:
+                      - button "Store listings" [ref=e148] [cursor=pointer]:
+                        - generic [ref=e149]: Store listings
+                    - listitem "Store listing experiments" [ref=e151]:
+                      - button "Store listing experiments" [ref=e152] [cursor=pointer]:
+                        - generic [ref=e153]: Store listing experiments
+                    - listitem "Promotional content" [ref=e155]:
+                      - button "Promotional content" [ref=e156] [cursor=pointer]:
+                        - generic [ref=e157]: Promotional content
+                    - listitem "YouTube videos" [ref=e159]:
+                      - button "YouTube videos" [ref=e160] [cursor=pointer]:
+                        - generic [ref=e161]: YouTube videos
+                    - listitem "Store settings" [ref=e163]:
+                      - button "Store settings" [ref=e164] [cursor=pointer]:
+                        - generic [ref=e165]: Store settings
+              - listitem "Store performance" [ref=e167]:
+                - button "Store performance" [ref=e168] [cursor=pointer]:
+                  - generic [ref=e169]: Store performance
+                  - img [ref=e171]: expand_more
+              - listitem "Play Games Services" [ref=e173]:
+                - button "Play Games Services" [ref=e174] [cursor=pointer]:
+                  - generic [ref=e175]: Play Games Services
+                  - img [ref=e177]: expand_more
+              - listitem "Translations" [ref=e179]:
+                - button "Translations" [ref=e180] [cursor=pointer]:
+                  - generic [ref=e181]: Translations
+                  - img [ref=e183]: expand_more
+              - listitem "Deep links" [ref=e185]:
+                - button "Deep links" [ref=e186] [cursor=pointer]:
+                  - generic [ref=e187]: Deep links
+        - listitem "Monetize with Play" [ref=e190]:
+          - button "Monetize with Play" [ref=e191] [cursor=pointer]:
+            - img [ref=e194]: sell
+            - generic [ref=e195]: Monetize with Play
+    - generic [ref=e22]:
+      - generic [ref=e199]:
+        - generic [ref=e201]:
+          - generic [ref=e203]:
+            - generic:
+              - generic:
+                - link "Go back to Store listings":
+                  - /url: /console/u/0/developers/4722227264647952214/app/4973456520797514198/store-listings
+                  - img [ref=e210] [cursor=pointer]: keyboard_backspace
+                  - generic [ref=e211] [cursor=pointer]: Store listings
+            - heading "Create default store listing" [level=1] [ref=e220]
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - heading "Present your app to users on Google Play" [level=2] [ref=e235]
+              - paragraph [ref=e236]:
+                - generic [ref=e237]: Make a great first impression and help users find and engage with your app through your store listing. Edit information like your app's name, icon, description, screenshots, and video to increase discoverability and drive downloads.
+              - generic [ref=e240]:
+                - link "Learn more about Create default store listing (opens in a new tab)" [ref=e242] [cursor=pointer]:
+                  - /url: https://play.google.com/console/about/storelistings
+                  - generic [ref=e245]: Learn more
+                - button "Hide detailed description about Create default store listing" [ref=e247]:
+                  - generic [ref=e250]: Hide
+            - img [ref=e252]
+        - generic [ref=e255]:
+          - generic [ref=e259]:
+            - generic [ref=e262]: Default – English (United States) – en-US
+            - button "Manage translations" [ref=e266] [cursor=pointer]:
+              - generic [ref=e269]: Manage translations
+              - img [ref=e271]: arrow_drop_down
+          - paragraph [ref=e274]: "* – Required fields. Enter all fields in English (United States) – en-US"
+          - generic [ref=e276]:
+            - heading "Listing assets" [level=2] [ref=e288]
+            - paragraph [ref=e292]:
+              - generic [ref=e294]:
+                - text: Check the
+                - link "Metadata policy" [ref=e295] [cursor=pointer]:
+                  - /url: https://play.google.com/about/storelisting-promotional/metadata
+                - text: and
+                - link "Help Center guidance" [ref=e296] [cursor=pointer]:
+                  - /url: https://support.google.com/googleplay/android-developer/answer/9866151
+                - text: to avoid common issues with your store listing. Review all
+                - link "program policies" [ref=e297] [cursor=pointer]:
+                  - /url: https://play.google.com/about/developer-content-policy
+                - text: before submitting your app.
+                - text: If you're eligible to
+                - link "provide advance notice" [ref=e298] [cursor=pointer]:
+                  - /url: https://support.google.com/googleplay/android-developer/answer/6320428
+                - text: to the app review team, contact us before publishing your store listing.
+            - generic [ref=e302]:
+              - group "App name" [ref=e304]:
+                - generic [ref=e307]: App name *
+                - generic [ref=e313]:
+                  - textbox "Name of the app" [ref=e315]: Sudoku
+                  - generic [ref=e316]:
+                    - paragraph [ref=e317]: This is how your app will appear on Google Play
+                    - generic [ref=e318]:
+                      - generic [ref=e319]: 6 / 30
+                      - generic [ref=e320]: Text is 6 characters out of 30
+              - group "Short description" [ref=e322]:
+                - generic [ref=e325]: Short description *
+                - generic [ref=e331]:
+                  - textbox "Short description of the app" [invalid] [ref=e333]: Classic Sudoku with 4 levels, smart hints, pencil notes and offline play. No ads.
+                  - generic [ref=e334]:
+                    - alert [ref=e799]: Add a short description for your app
+                    - generic [ref=e336]:
+                      - generic [ref=e337]: 81 / 80
+                      - generic [ref=e338]: Text is 81 characters out of 80
+              - group "Full description" [ref=e340]:
+                - generic [ref=e343]: Full description *
+                - generic [ref=e349]:
+                  - textbox "Full description of the app" [ref=e352]: Sudoku is a clean, native number puzzle built for focus and calm. Every puzzle is generated right on your device with a guaranteed unique solution — so there's always exactly one correct answer, and never a guess. FOUR DIFFICULTY LEVELS • Easy — a gentle warm-up • Medium — a balanced challenge • Hard — for seasoned solvers • Expert — ruthless; good luck BUILT FOR REAL SOLVING • Pencil notes (candidates) in every cell • Smart hints when you're stuck • Conflict highlighting and same-number highlighting • Auto-remove pencil marks as you place numbers • Optional "3 strikes" mistake limit for an extra challenge • Undo, erase, and a one-tap pause TRACK YOUR PROGRESS • Score every solve — faster, hint-free, mistake-free games score highest • Best times per difficulty and a full game history • Continue exactly where you left off PRIVATE BY DESIGN • 100% offline — no internet permission required • No ads, no tracking, no accounts • Your scores and history stay on your device and never leave it Train your brain, one grid at a time.
+                  - generic [ref=e353]:
+                    - paragraph [ref=e354]
+                    - generic [ref=e355]:
+                      - generic [ref=e356]: 1042 / 4000
+                      - generic [ref=e357]: Text is 1042 characters out of 4000
+            - heading "Graphics" [level=2] [ref=e369]
+            - paragraph [ref=e373]:
+              - generic [ref=e375]:
+                - text: Manage your app icon, screenshots, and videos to promote your app on Google Play. Review the
+                - link "content guidelines" [ref=e376] [cursor=pointer]:
+                  - /url: https://support.google.com/googleplay/android-developer/answer/9866151#zippy=%2Capp-icon
+                - text: before uploading new graphics. If you add translations for your store listing without localized graphics, we will use the graphics from your default language.
+            - generic [ref=e380]:
+              - group "App icon" [ref=e382]:
+                - generic [ref=e385]: App icon *
+                - generic [ref=e390]:
+                  - button "Add assets" [ref=e395]:
+                    - generic [ref=e398]: Add assets
+                  - paragraph [ref=e400]:
+                    - generic [ref=e402]:
+                      - text: Your app icon must be a PNG or JPEG, up to 1 MB, 512 px by 512 px, and meet our
+                      - link "design specifications" [ref=e403] [cursor=pointer]:
+                        - /url: https://developer.android.com/google-play/resources/icon-design-specifications
+                      - text: and
+                      - link "metadata policy" [ref=e404] [cursor=pointer]:
+                        - /url: https://support.google.com/googleplay/android-developer/answer/9898842
+              - group "Feature graphic" [ref=e406]:
+                - generic [ref=e409]: Feature graphic *
+                - generic [ref=e414]:
+                  - button "Add assets" [ref=e419]:
+                    - generic [ref=e422]: Add assets
+                  - paragraph [ref=e424]:
+                    - generic [ref=e425]: Your feature graphic must be a PNG or JPEG, up to 15 MB, and 1,024 px by 500 px
+              - group "Video" [ref=e427]:
+                - generic [ref=e430]: Video
+                - generic [ref=e436]:
+                  - generic [ref=e437]:
+                    - generic:
+                      - generic:
+                        - generic: https://www.youtube.com/watch?v=
+                    - textbox "Promotional YouTube video URL for the app" [ref=e438]
+                  - paragraph [ref=e440]: Add a video by entering a YouTube URL. This video must be public or unlisted, ads must be turned off, and it must not be age restricted.
+            - heading "Phone" [level=3] [ref=e452]
+            - group "Phone screenshots" [ref=e458]:
+              - generic [ref=e461]: Phone screenshots *
+              - generic [ref=e463]:
+                - generic [ref=e466]:
+                  - button "Add assets" [ref=e471]:
+                    - generic [ref=e474]: Add assets
+                  - paragraph [ref=e476]:
+                    - generic [ref=e477]: Upload 2-8 phone screenshots. Screenshots must be PNG or JPEG, up to 8 MB each, 16:9 or 9:16 aspect ratio, with each side between 320 px and 3,840 px
+                - generic [ref=e478]:
+                  - img [ref=e481]: info
+                  - generic [ref=e484]: To be eligible for promotion, include at least 4 screenshots, with at least 3 in 16:9 or 9:16 and at least 1080 px.
+                  - link "View content guidelines about phone screenshots" [ref=e491] [cursor=pointer]:
+                    - /url: https://support.google.com/googleplay/android-developer/answer/9866151#screenshots
+                    - generic [ref=e494]: View content guidelines
+            - heading "Tablet" [level=3] [ref=e506]
+            - generic [ref=e510]:
+              - group "7-inch tablet screenshots" [ref=e512]:
+                - generic [ref=e515]: 7-inch tablet screenshots *
+                - generic [ref=e520]:
+                  - button "Add assets" [ref=e525]:
+                    - generic [ref=e528]: Add assets
+                  - paragraph [ref=e530]:
+                    - generic [ref=e531]: Upload up to eight 7-inch tablet screenshots. Screenshots must be PNG or JPEG, up to 8 MB each, 16:9 or 9:16 aspect ratio, with each side between 320 px and 3,840 px
+              - group "10-inch tablet screenshots" [ref=e533]:
+                - generic [ref=e536]: 10-inch tablet screenshots *
+                - generic [ref=e541]:
+                  - button "Add assets" [ref=e546]:
+                    - generic [ref=e549]: Add assets
+                  - paragraph [ref=e551]:
+                    - generic [ref=e552]: Upload up to eight 10-inch tablet screenshots. Screenshots must be PNG or JPEG, up to 8 MB each, 16:9 or 9:16 aspect ratio, with each side between 1,080 px and 7,680 px
+            - heading "Google Play Games on PC" [level=3] [ref=e564]
+            - generic [ref=e566]:
+              - paragraph [ref=e568]:
+                - generic [ref=e570]:
+                  - text: Your Google Play Games on PC logo is centered and overlaid on top of your feature graphic to make up a game card, which is used to represent your game on Google Play Games. To make sure that your game card looks correct, make sure that you follow the guidelines for both images.
+                  - link "View guidelines" [ref=e571] [cursor=pointer]:
+                    - /url: https://support.google.com/googleplay/android-developer/answer/13743525
+              - generic [ref=e573]:
+                - group "Google Play Games on PC logo" [ref=e575]:
+                  - generic [ref=e578]: Google Play Games on PC logo
+                  - generic [ref=e583]:
+                    - button "Add assets" [ref=e588]:
+                      - generic [ref=e591]: Add assets
+                    - paragraph [ref=e593]:
+                      - generic [ref=e595]:
+                        - text: Your logo is centered and overlaid on top of your feature graphic to make up your game card, which is used to represent your game on Google Play Games. Your logo must be a transparent PNG, up to 8 MB, and 600 px by 400 px. It must represent the name of your game.
+                        - link "View guidelines" [ref=e596] [cursor=pointer]:
+                          - /url: https://support.google.com/googleplay/android-developer/answer/13743525
+                - group "Google Play Games on PC feature graphic" [ref=e598]:
+                  - generic [ref=e601]: Google Play Games on PC feature graphic
+                  - generic [ref=e606]:
+                    - button "Add assets" [ref=e611]:
+                      - generic [ref=e614]: Add assets
+                    - paragraph [ref=e616]:
+                      - generic [ref=e618]:
+                        - text: Your feature graphic is combined with your logo to make up your game card, which is used to represent your game on Google Play Games. Your feature graphic must be a PNG or JPG, up to 15 MB, 16:9 aspect ratio, with each side between 720 px and 7,680 px. It must represent your game cover, and not contain any text.
+                        - link "View guidelines" [ref=e619] [cursor=pointer]:
+                          - /url: https://support.google.com/googleplay/android-developer/answer/13743525
+                - group "Google Play Games on PC screenshots" [ref=e621]:
+                  - generic [ref=e624]: Google Play Games on PC screenshots
+                  - generic [ref=e629]:
+                    - button "Add assets" [ref=e634]:
+                      - generic [ref=e637]: Add assets
+                    - paragraph [ref=e639]:
+                      - generic [ref=e640]: Upload 4-8 screenshots. Screenshots must be PNG or JPEG, up to 15 MB each, 16:9 or 9:16 aspect ratio, with each side between 720 px and 7,680 px
+                - group "Google Play Games on PC video" [ref=e642]:
+                  - generic [ref=e645]: Google Play Games on PC video
+                  - generic [ref=e651]:
+                    - generic [ref=e652]:
+                      - generic:
+                        - generic:
+                          - generic: https://www.youtube.com/watch?v=
+                      - textbox "https://www.youtube.com/watch?v=" [ref=e653]
+                    - paragraph [ref=e655]: Add a video by entering a YouTube URL. This video must be public or unlisted, ads must be turned off, and it must not be age restricted.
+            - heading "Chromebook" [level=3] [ref=e667]
+            - group "Chromebook screenshots" [ref=e673]:
+              - generic [ref=e676]: Chromebook screenshots
+              - generic [ref=e681]:
+                - button "Add assets" [ref=e686]:
+                  - generic [ref=e689]: Add assets
+                - paragraph [ref=e691]:
+                  - generic [ref=e692]: Upload 4-8 screenshots. Screenshots must be PNG or JPEG, up to 8 MB each, 16:9 or 9:16 aspect ratio, with each side between 1,080 px and 7,680 px
+            - heading "Android XR" [level=3] [ref=e704]
+            - generic [ref=e708]:
+              - group "Android XR screenshots" [ref=e710]:
+                - generic [ref=e713]: Android XR screenshots
+                - generic [ref=e718]:
+                  - button "Add assets" [ref=e723]:
+                    - generic [ref=e726]: Add assets
+                  - paragraph [ref=e728]:
+                    - generic [ref=e729]: Upload 4-8 screenshots. Screenshots must be PNG or JPEG, up to 15 MB each, 16:9 or 9:16 aspect ratio, with each side between 720 px and 7,680 px
+              - group "Spatial XR video" [ref=e731]:
+                - generic [ref=e734]: Spatial XR video
+                - generic [ref=e739]:
+                  - generic [ref=e741]:
+                    - generic:
+                      - generic:
+                        - generic: https://www.youtube.com/watch?v=
+                    - textbox "https://www.youtube.com/watch?v=" [ref=e742]
+                  - paragraph [ref=e744]:
+                    - generic [ref=e746]:
+                      - text: Add a
+                      - link "spatial XR video" [ref=e747] [cursor=pointer]:
+                        - /url: https://support.google.com/googleplay/android-developer/answer/9866151#zippy=%2Cpreview-video
+                      - text: for an immersive preview of your features by entering a YouTube URL. This video must be in 360°, 180°, or 3D, be public or unlisted, ads must be turned off, and it must not be age restricted.
+              - group "Non-spatial XR video" [ref=e749]:
+                - generic [ref=e752]: Non-spatial XR video
+                - generic [ref=e757]:
+                  - generic [ref=e759]:
+                    - generic:
+                      - generic:
+                        - generic: https://www.youtube.com/watch?v=
+                    - textbox "https://www.youtube.com/watch?v=" [ref=e760]
+                  - paragraph [ref=e762]:
+                    - generic [ref=e763]: Add a non-spatial XR video by entering a YouTube URL. This video must be public or unlisted, ads must be turned off, and it must not be age restricted.
+        - generic [ref=e767]:
+          - generic [ref=e800]: If you save, changes will be saved in Publishing overview, ready for you to send for review
+          - generic [ref=e770]:
+            - button "Discard" [ref=e802]:
+              - generic [ref=e805]: Discard
+            - generic [ref=e777]:
+              - button "Save as draft" [ref=e807]:
+                - generic [ref=e810]: Save as draft
+              - button "Save" [ref=e812]:
+                - generic [ref=e815]: Save
+      - generic [ref=e30]:
+        - generic [ref=e790]:
+          - link "Product updates" [ref=e791] [cursor=pointer]:
+            - /url: https://play.google.com/console/about/whats-new/
+          - link "Status dashboard" [ref=e792] [cursor=pointer]:
+            - /url: https://status.play.google.com/
+          - link "Help" [ref=e793] [cursor=pointer]:
+            - /url: /console/u/0/developers/4722227264647952214/help-and-support?app=4973456520797514198
+        - generic [ref=e794]:
+          - generic [ref=e795]: © 2026 Google
+          - link "Privacy" [ref=e796] [cursor=pointer]:
+            - /url: https://www.google.com/policies/privacy/
+          - link "Developer Distribution Agreement" [ref=e797] [cursor=pointer]:
+            - /url: https://play.google.com/about/developer-distribution-agreement.html
+          - link "Terms of Service" [ref=e798] [cursor=pointer]:
+            - /url: https://play.google.com/about/console/terms-of-service/

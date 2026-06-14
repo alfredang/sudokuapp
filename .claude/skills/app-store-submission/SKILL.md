@@ -1,6 +1,6 @@
 ---
 name: app-store-submission
-description: End-to-end submission of an iOS/iPadOS app to the App Store, driven almost entirely by the App Store Connect API + Xcode CLI (no manual portal clicking where avoidable). Use when archiving, uploading a build, setting metadata/screenshots/pricing, and submitting for review. Covers the hard-won gotchas (iPhone-screenshot quirk for iPad-only apps, App Privacy being UI-only, CloudKit Production schema deploy, required fields that block submission).
+description: End-to-end submission of an iOS/iPadOS app to the App Store, driven almost entirely by the App Store Connect API + Xcode CLI (no manual portal clicking where avoidable). Use when archiving, uploading a build, setting metadata/screenshots/pricing, and submitting for review. Covers the hard-won gotchas (iPhone-screenshot quirk for iPad-only apps, App Privacy being UI-only, CloudKit Production schema deploy, required fields that block submission). Also includes a Google Play Console companion section for shipping the Android twin (Play Console browser workflow + gotchas: the contact-details second-confirm dialog, closed-testing release "add bundle from library", and the "Send for review" quick-checks gate).
 license: MIT
 metadata:
   author: Tertiary Infotech Academy
@@ -168,6 +168,83 @@ review the Development→Production diff and **Deploy**.
 | iPhone 6.5" (legacy, the quirk) | `APP_IPHONE_65` | 1242×2688 or 1284×2778 |
 
 Only the **first 3** screenshots per set appear on the install sheet.
+
+## Google Play Console submission (Android twin) — companion
+
+The Tertiary Infotech apps ship on **both** stores. The Android version goes through the
+**Google Play Console** (web UI — there's no clean public API for the listing/review flow, so
+this is browser automation, e.g. Playwright). This section captures the exact path and the
+gotchas that cost hours. Dev account id used here: `4722227264647952214`.
+
+### The end-to-end path (Draft → in review → live to testers)
+
+A new app starts as **Draft**. To get it reviewed "like an existing closed-test app", you
+**don't** just click one button — you complete app setup, then create+roll-out a **Closed
+testing** release, then send everything for review together:
+
+1. **Finish "Provide game information and create your store listing"** on the app **Dashboard**
+   (must be N-of-N complete or "Send for review" stays **locked**). Items: privacy policy URL,
+   sign-in details, ads, **content rating** questionnaire, **target audience** (e.g. 18+),
+   **data safety**, government/financial/health declarations, store listing, **and** app
+   category + contact details (see gotcha below — this is the one that silently sticks at
+   "10 of 11").
+2. **Closed testing track** (`Test and release → Testing → Closed testing → Manage track`):
+   - **Countries / regions** tab → *Add* → **Select all rows** → **Save** (mirrors the
+     all-177-countries setup of sibling apps).
+   - **Testers** tab → Email lists → tick the shared lists (the Tertiary apps use **"Tester"**
+     and **"tester 01"**) → **Save**. Email lists are **developer-account-level / shared across
+     apps**, so the same lists appear for every app.
+   - **Release**: the track may show "Create a new release" as ✓ done but have **no bundle** —
+     see gotcha. Add the AAB, **Preview and confirm**, then **Save**.
+3. **Publishing overview → "Send N changes for review"** → confirm. This bundles the store
+   listing + app content + the closed-testing release into one review submission.
+4. After **automated quick checks** (up to ~14 min) the changes go to Google; review is
+   "typically within 7 days" but often far quicker. With **managed publishing OFF**, on
+   approval it **auto-publishes**: the release flips to **"Available to testers on Google
+   Play"** and the app's **App status** column becomes **Closed testing**. The **"In review"**
+   badge in the app-list *Update status* column is **transient** — it clears once review
+   completes, so its absence ≠ failure; verify via Releases overview / Publishing overview.
+
+### Gotchas (the time-savers)
+
+- **Store-listing contact details silently revert without the second confirm.** *Store settings
+  → Store listing contact details → Edit →* fill **email** (required) + website → **Save and
+  publish** opens a SECOND modal **"Publish change on Google Play?"** with its own **Save and
+  publish**. If you skip that confirmation (navigate away/reload), the value shows inline for a
+  moment then **reverts to empty on reload — no error, no pending-change row**. This is what
+  keeps the dashboard task *"Select an app category and provide contact details"* stuck and
+  *"Send for review"* locked. Always click the confirmation. (Category, by contrast, saves as a
+  normal pending change with one "Save".) Tertiary values: email
+  `angch@tertiaryinfotech.com`, website `www.tertiaryinfotech.com`.
+- **App category is required and lives in Store settings**, not the listing. *Store settings →
+  App category → Edit* → App or game + **Category** (e.g. a Sudoku game = **Puzzle**) → Save.
+- **"Send app/N changes for review" is disabled for two different reasons**, shown in the same
+  spot: (a) a **lock** "complete the required steps in the app dashboard" (finish app setup),
+  and (b) **"Running quick checks … up to N minutes remaining"** (just wait — the button enables
+  after, or queues and sends when checks pass).
+- **A closed-testing release can exist with "Create a new release" ✓ but NO app bundle.**
+  *Preview and confirm* then errors with **2 errors**: *"This release does not add or remove any
+  app bundles"* + *"doesn't allow any existing users to upgrade…"*. Fix: go **Back** to the
+  Create-release step → **Add from library** (reuse an already-uploaded AAB rather than
+  re-uploading) → pick the **highest version code** → **Add to release** → Next → Save.
+- **A success snackbar overlay intercepts clicks** after saving on track pages (countries/
+  testers). Don't fight it — **navigate directly to the tab URL** instead, e.g.
+  `…/tracks/<trackId>?tab=testers` or `?tab=countryAvailability`.
+- **Benign warning:** *"This App Bundle contains native code, and you've not uploaded debug
+  symbols"* is a recommendation, **not** a blocker — proceed.
+- **Internal vs Closed testing are separate tracks.** An app can be live on Internal testing
+  yet have an empty Closed testing track; the App-status column reflects the most-advanced
+  track once published.
+
+### Quick reference (Tertiary Infotech Play account)
+
+```
+Dev account id:   4722227264647952214
+Closed testing:   Closed testing - Alpha, all 177 countries
+Tester lists:     "Tester" (~26) + "tester 01" (~13)   # shared across all apps
+Contact:          angch@tertiaryinfotech.com / www.tertiaryinfotech.com
+Sudoku (Android): com.tertiaryinfotech.sudokuapp — Puzzle game, 18+ target audience
+```
 
 ## Per-project template
 
