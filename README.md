@@ -7,11 +7,14 @@
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-0A84FF?logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
 [![XcodeGen](https://img.shields.io/badge/XcodeGen-2.45-1389FD)](https://github.com/yonaskolb/XcodeGen)
 [![Age Rating](https://img.shields.io/badge/Age%20Rating-18%2B-E4002B)](#)
+[![App Store](https://img.shields.io/badge/App%20Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/us/app/tertiary-sudoku/id6779973622)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](#license)
 
 **A clean, offline, native iPhone Sudoku game — unlimited unique puzzles, four difficulty levels, smart hints, and local high scores.**
 
-[Report Bug](https://github.com/alfredang/sudokuapp/issues) · [Request Feature](https://github.com/alfredang/sudokuapp/issues)
+<a href="https://apps.apple.com/us/app/tertiary-sudoku/id6779973622"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="48"></a>
+
+[Download on the App Store](https://apps.apple.com/us/app/tertiary-sudoku/id6779973622) · [Report Bug](https://github.com/alfredang/sudokuapp/issues) · [Request Feature](https://github.com/alfredang/sudokuapp/issues)
 
 </div>
 
